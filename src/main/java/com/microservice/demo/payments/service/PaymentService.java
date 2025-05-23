@@ -9,7 +9,7 @@ import java.util.Map;
 public class PaymentService {
 
     // Mock payment data
-    private Map<String, PaymentStatus> paymentDatabase = new HashMap<>();
+    private final Map<String, PaymentStatus> paymentDatabase = new HashMap<>();
 
     public PaymentService() {
         // Initialize with some mock data
