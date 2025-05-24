@@ -1,6 +1,7 @@
 spring:
   application:
-    name:microservices-payment-service-demo
+    name: microservices-payment-service-demo
+
 
 server:
   port: 8082
@@ -10,4 +11,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
+    appname: microservices-payment-service-demo
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+    hostname: ${spring.application.name}
